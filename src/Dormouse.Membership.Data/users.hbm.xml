@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Dormouse.Membership.Model" assembly="Dormouse.Membership.Model">
+  <class name="User" table="Users">
+    <id name="UserId">
+      <generator class="hilo" />
+    </id>
+    <property name="UserName" />
+    <property name="ApplicationName" />
+    <property name="EMail" />
+    <property name="Comment" />
+    <property name="Password" />
+    <property name="PasswordQuestion" />
+    <property name="PasswordAnswer" />
+    <property name="IsApproved" />
+    <property name="LastActivityDate" />
+    <property name="LastLoginDate" />
+    <property name="LastPasswordChangedDate" />
+    <property name="CreationDate" />
+    <property name="IsOnline" />
+    <property name="IsLockedOut" />
+    <property name="LastLockedOutDate" />
+    <property name="FailedPasswordAttemptCount" />
+    <property name="FailedPasswordAttemptWindowStart" />
+    <property name="FailedPasswordAnswerAttemptCount" />
+    <property name="FailedPasswordAnswerAttemptWindowStart" />
+    <property name="PrevLoginDate" />
+    <property name="OpenIdClaimedIdentifier" />
+
+    <bag name="Roles" table="UsersInRoles" lazy="false">
+      <key column="UserId"></key>
+      <many-to-many class="Role" column="RoleId" />
+    </bag>
+
+  </class>
+</hibernate-mapping>
