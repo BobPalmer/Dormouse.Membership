@@ -1,3 +1,5 @@
-Dormouse Membership is an implementation of the .Net Membership provider using NHibernate, and with a few extras.  There is a SQL directory with the code needed to spin up a new membership database (you will also need this to run integration tests).
+Dormouse Membership is an implementation of the .Net Membership provider using NHibernate, and with a few extras.  
+There is a SQL directory with the code needed to spin up a new membership database (you will also need this to 
+run integration tests).
 
 Enjoy!
